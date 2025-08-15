@@ -1,32 +1,3 @@
-// // Mobile menu toggle
-// const toggle = document.getElementById('menu-toggle');
-// const links = document.getElementById('nav-links');
-// if (toggle) {
-//   toggle.addEventListener('click', () => links.classList.toggle('open'));
-// }
-
-// // Smooth-scroll active link highlight (progressive enhancement) [20][23]
-// const sections = document.querySelectorAll('main section[id]');
-// const navAnchors = document.querySelectorAll('#nav-links a');
-
-// function setActive() {
-//   let cur = '';
-//   sections.forEach(sec => {
-//     const top = window.scrollY + 120;
-//     if (top >= sec.offsetTop && top < sec.offsetTop + sec.offsetHeight) {
-//       cur = '#' + sec.id;
-//     }
-//   });
-//   navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === cur));
-// }
-// document.addEventListener('scroll', setActive);
-// setActive();
-
-// // Current year in footer
-// const year = document.getElementById('year');
-// if (year) year.textContent = new Date().getFullYear();
-
-
 (function () {
   'use strict';
 
@@ -47,15 +18,18 @@
     }
   }
 
-  // Initialize clickable dropdown behavior for project bars
-  function initProjectDropdowns() {
-    // Bars are marked with data-project-bar in the HTML
-    var bars = document.querySelectorAll('[data-project-bar]');
+  // Initialize clickable dropdown behavior for expandable bars
+  function initExpandableBars() {
+    // Select all bars from both projects and experiences pages
+    var bars = document.querySelectorAll('[data-project-bar], [data-exp]');
     if (!bars || !bars.length) return;
 
     bars.forEach(function (bar) {
-      // Toggle open/closed on click anywhere in the bar except on links
-      bar.addEventListener('click', function (e) {
+      // Find the primary clickable area, if it exists
+      var toggle = bar.querySelector('.exp-bar-toggle') || bar;
+
+      // Toggle open/closed on click
+      toggle.addEventListener('click', function (e) {
         if (e.target && e.target.closest('a')) return; // don't toggle when a link is clicked
         bar.classList.toggle('open');
       });
@@ -74,6 +48,6 @@
   // Initialize all features
   ready(function () {
     initFooterYear();
-    initProjectDropdowns();
+    initExpandableBars();
   });
 })();

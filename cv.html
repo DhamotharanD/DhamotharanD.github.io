@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dhamotharan D — CV</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> <!-- Minimal tweaks to keep your existing look, and align the social circles perfectly in a straight line -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --container: 752px;
@@ -37,7 +37,6 @@
             padding: 0 24px
         }
 
-        /* Blue upper section (reduced size per your last version) */
         .header {
             position: relative;
             color: #fff;
@@ -84,29 +83,21 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, .14), 0 4px 5px rgba(0, 0, 0, .12), 0 1px 10px rgba(0, 0, 0, .2)
         }
 
-        /* Social circles — aligned perfectly in one straight horizontal line */
         .social {
             list-style: none;
             margin: 12px 0 0;
             padding: 0;
             display: flex;
-            /* ensure one row */
             justify-content: center;
-            /* center the whole row */
             align-items: center;
-            /* vertically center each circle */
             gap: 10px;
-            /* uniform spacing */
             line-height: 0;
-            /* remove inline spacing artifacts */
         }
 
         .social li {
             margin: 0;
-            /* remove default list margins */
             padding: 0;
             display: flex;
-            /* helps keep anchor centered */
         }
 
         .social a {
@@ -125,7 +116,6 @@
             overflow: hidden;
             border: 1px solid var(--border);
             flex: 0 0 auto;
-            /* prevent flex growth/shrink that can misalign */
         }
 
         .social a img {
@@ -135,7 +125,6 @@
             display: block;
         }
 
-        /* Centered toggle bar */
         .nav-wrap {
             display: flex;
             justify-content: center;
@@ -169,7 +158,6 @@
             font-weight: 700
         }
 
-        /* Main */
         main {
             min-height: 60vh;
             padding: 28px 0
@@ -186,10 +174,9 @@
             margin: 0 0 10px
         }
 
-        /* Scrollable CV viewer */
         .cv-panel {
-            height: 520px;
-            max-height: 520px;
+            height: 800px;
+            max-height: 80vh;
             overflow: auto;
             padding: 0;
             border: 1px solid var(--border);
@@ -238,32 +225,29 @@
     </style>
 </head>
 
-<body> <!-- Blue upper section (further reduced height) -->
+<body>
     <header class="header">
-        <div class="header-inner container"> <!-- Use your photo path -->
+        <div class="header-inner container">
             <div class="avatar"><img src="assets/dp.jpeg" alt="Portrait of Dhamotharan D"></div>
             <div class="title-wrap">
                 <h1><a href="index.html" style="color:#fff;text-decoration:none">Dhamotharan D</a></h1>
-                <div class="subtitle">B.S. and M.S., Biological Sciences — Department of Biotechnology, Bhupat &amp; Jyoti Mehta School of Biosciences, IIT Madras</div>
-
-                <!-- Social icons: now guaranteed to align in a straight horizontal line -->
-                <ul class="social"> <!-- Google Scholar image icon -->
-                    <li> <a aria-label="Google Scholar" href="#" target="_blank" rel="noopener"> <img src="assets/google_scholar.png" alt="Google Scholar"> </a> </li> <!-- ORCID image icon -->
-                    <li> <a aria-label="ORCID" href="#" target="_blank" rel="noopener"> <img src="assets/orcid.png" alt="ORCID"> </a> </li> <!-- LinkedIn image icon -->
-                    <li> <a aria-label="LinkedIn" href="#" target="_blank" rel="noopener"> <img src="assets/linkedin.png" alt="LinkedIn"> </a> </li> <!-- GitHub image icon -->
-                    <li> <a aria-label="GitHub" href="#" target="_blank" rel="noopener"> <img src="assets/github.png" alt="GitHub"> </a> </li> <!-- Gmail image icon (mailto link preserved) -->
-                    <li> <a aria-label="Email" href="mailto:boneshwar.vk20@gmail.com"> <img src="assets/gmail.png" alt="Email"> </a> </li>
+                <div class="subtitle">B. Tech in Metallurgical and Materials Engineering & M. Tech in Advanced Materials and Nanotechnology, IIT Madras</div>
+                <ul class="social">
+                    <li><a aria-label="Google Scholar" href="#" target="_blank" rel="noopener"><img src="assets/google_scholar.png" alt="Google Scholar"></a></li>
+                    <li><a aria-label="ORCID" href="#" target="_blank" rel="noopener"><img src="assets/orcid.png" alt="ORCID"></a></li>
+                    <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/dhamotharan-d-/" target="_blank" rel="noopener"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
+                    <li><a aria-label="GitHub" href="#" target="_blank" rel="noopener"><img src="assets/github.png" alt="GitHub"></a></li>
+                    <li><a aria-label="Email" href="mailto:dhamoddharan.in@gmail.com"><img src="assets/gmail.png" alt="Email"></a></li>
                 </ul>
             </div>
         </div>
-
-        <!-- Centered navigation -->
         <div class="nav-wrap">
             <nav class="nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="publications.html">Publications</a>
                 <a class="active" href="cv.html">CV</a>
                 <a href="projects.html">Projects</a>
+		<a href="achievements.html">Achievements</a>
                 <a href="experience.html">Experiences</a>
             </nav>
         </div>
@@ -271,16 +255,14 @@
     <main>
         <div class="container">
             <h1 class="page-title">Curriculum Vitae</h1>
-            <p class="lead">Download PDF: <a href="docs/cv.pdf" target="_blank" rel="noopener">Open in a new tab</a></p>
+            <p class="lead">Download PDF: <a href="docs/Dhamotharan_CV.pdf" target="_blank" rel="noopener">Open in a new tab</a></p>
             <div class="cv-panel" id="cv-viewer">
-                <iframe title="Embedded CV PDF" src="docs/cv.pdf#toolbar=0&navpanes=0"></iframe>
+                <iframe title="Embedded CV PDF" src="docs/Dhamotharan_CV.pdf#toolbar=0&navpanes=0"></iframe>
             </div>
         </div>
     </main>
     <footer>© <span id="year"></span> Dhamotharan D</footer>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>

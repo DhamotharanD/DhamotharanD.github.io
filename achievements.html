@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dhamotharan D — Experiences</title>
+    <title>Dhamotharan D — Achievements</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -36,21 +36,12 @@
         main { min-height: 60vh; padding: 28px 0 }
         .page-title { margin: 0 0 8px; font-size: 30px; letter-spacing: -.02em }
         .lead { color: #374151; margin: 0 0 12px }
-        .section-title { margin: 22px 0 10px; font-size: 22px; letter-spacing: -.01em }
         .experiences { display: flex; flex-direction: column; gap: 12px; }
-        .exp-bar { border: 1px solid var(--border); border-radius: 12px; background: #fff; box-shadow: var(--shadow); padding: 18px 18px; transition: box-shadow .15s ease, border-color .15s ease; }
-        .exp-bar-toggle { cursor: pointer; user-select: none; }
-        .exp-bar:focus-within { outline: 2px solid #c7d2fe; outline-offset: 2px }
-        .exp-bar:hover { box-shadow: 0 3px 6px #0000002f, 0 6px 10px #0000001a, 0 1px 14px #0003; border-color: #d7dae0; }
+        .exp-bar { border: 1px solid var(--border); border-radius: 12px; background: #fff; box-shadow: var(--shadow); padding: 18px 18px; }
         .exp-top { display: flex; align-items: flex-start; gap: 12px; }
         .exp-title { font-weight: 700; font-size: 18px; margin: 0; color: #0f172a; flex: 1 1 auto; }
-        .exp-time { flex: 0 0 auto; font-size: 14px; color: #475569; white-space: nowrap; display: flex; align-items: center; gap: 10px; }
-        .chevron { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid #475569; transition: transform .2s ease; }
-        .exp-bar.open .chevron { transform: rotate(180deg) }
+        .exp-time { flex: 0 0 auto; font-size: 14px; color: #475569; white-space: nowrap; }
         .exp-desc { margin: 10px 0 0; color: #334155; line-height: 1.5; }
-        .exp-details { display: none; margin-top: 12px; color: #1f2937; line-height: 1.55; border-top: 1px dashed #e5e7eb; padding-top: 12px; }
-        .exp-details ul { padding-left: 20px; margin: 0; }
-        .exp-bar.open .exp-details { display: block }
         footer { padding: 24px 0; border-top: 1px solid var(--border); background: #fff; text-align: center; color: #4b5563; }
         @media (max-width:540px) {
             .title-wrap h1 { font-size: 30px }
@@ -59,7 +50,6 @@
             .nav a { font-size: 16px }
             .social { gap: 8px }
         }
-        noscript .exp-details { display: block !important }
     </style>
 </head>
 <body>
@@ -84,58 +74,29 @@
                 <a href="publications.html">Publications</a>
                 <a href="cv.html">CV</a>
                 <a href="projects.html">Projects</a>
-                <a href="achievements.html">Achievements</a>
-                <a class="active" href="experience.html">Experiences</a>
+                <a class="active" href="achievements.html">Achievements</a>
+                <a href="experience.html">Experiences</a>
             </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <h1 class="page-title">Experiences</h1>
-            <p class="lead">My professional and leadership experiences.</p>
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experiences">
-                <div class="exp-bar" data-exp tabindex="0">
-                    <div class="exp-bar-toggle">
-                        <div class="exp-top">
-                            <h3 class="exp-title">R&D Intern — The Titan Company Jewellery Division</h3>
-                            <div class="exp-time">May 2022 – Jul 2022 <span class="chevron" aria-hidden="true"></span></div>
-                        </div>
-                        <p class="exp-desc">Contributed to developing a cost-efficient manufacturing route for gold bangles and optimized the production of 18K white gold rods.</p>
-                    </div>
-                    <div class="exp-details">
-                        <ul>
-                            <li>Contributed to a project aimed at developing a cost and time-efficient manufacturing route for gold bangle production by replacing conventional methods with continuous casting of a hollow cylindrical product.</li>
-                            <li>Optimized production of 18K white gold rods (3-8mm diameter) for Nick plate applications using vacuum induction melting, reducing purity deviations, improving yield, and lowering costs.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <h2 class="section-title">Positions of Responsibility</h2>
+            <h1 class="page-title">Achievements & Awards</h1>
+            <p class="lead">A collection of my academic awards and recognitions.</p>
             <div class="experiences">
                 <div class="exp-bar">
                     <div class="exp-top">
-                        <h3 class="exp-title">Strategist, Saarang Nova, IIT Madras</h3>
-                        <div class="exp-time">Jun 2022 – May 2023</div>
+                        <h3 class="exp-title">Prof. K. Gopinath & Mrs. Padmini Gopinath Prize</h3>
+                        <div class="exp-time">2024-25</div>
                     </div>
+                    <p class="exp-desc">Secured for the best academic performance of the Inter Disciplinary Dual Degree Programme in Advanced Materials and Nano Technology branch at IIT Madras.</p>
                 </div>
                 <div class="exp-bar">
                     <div class="exp-top">
-                        <h3 class="exp-title">Co-ordinator, Saarang Publicity and Hospitality, IIT Madras</h3>
-                        <div class="exp-time">Jun 2022 – May 2023</div>
+                        <h3 class="exp-title">Institute Merit Prize</h3>
+                        <div class="exp-time">2024-25</div>
                     </div>
-                </div>
-                <div class="exp-bar">
-                    <div class="exp-top">
-                        <h3 class="exp-title">Co-ordinator, Media Club, IIT Madras</h3>
-                        <div class="exp-time">Dec 2021 – May 2022</div>
-                    </div>
-                </div>
-                <div class="exp-bar">
-                    <div class="exp-top">
-                        <h3 class="exp-title">Mentor, Saathi Mentorship Cell, IIT Madras</h3>
-                        <div class="exp-time">Dec 2021 – May 2022</div>
-                    </div>
+                    <p class="exp-desc">Secured for high cumulative grade in the 7th & 8th semesters of the IDDD program in Advanced materials and Nano Technology at IIT Madras.</p>
                 </div>
             </div>
         </div>

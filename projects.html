@@ -1,234 +1,456 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>Dhamotharan D — Projects</title> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> <style> :root { --container: 752px; --border: #e5e7eb; --shadow: 0 2px 4px #00000024, 0 4px 5px #0000001f, 0 1px 10px #0003; --header-bg: #2f5369; }
-text
-html { scroll-behavior: smooth }
-* { box-sizing: border-box }
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-  margin: 0;
-  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #000000de;
-  background: #fff;
-}
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dhamotharan D — Projects</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --container: 752px;
+            --border: #e5e7eb;
+            --shadow: 0 2px 4px #00000024, 0 4px 5px #0000001f, 0 1px 10px #0003;
+            --header-bg: #2f5369;
+        }
 
-.container { max-width: var(--container); margin: 0 auto; padding: 0 24px }
+        html {
+            scroll-behavior: smooth
+        }
 
-/* Blue upper section (match cv/index) */
-.header { position: relative; color: #fff; background: var(--header-bg) }
-.header-inner { position: relative; min-height: 30vh; padding: 22px 20px }
+        * {
+            box-sizing: border-box
+        }
 
-.avatar {
-  width: 144px; height: 144px; margin: 0 auto 10px; border-radius: 50%;
-  border: 5px solid #fff; box-shadow: var(--shadow); overflow: hidden; background: #ccc;
-}
-.avatar img { width: 100%; height: 100%; object-fit: cover }
+        body {
+            margin: 0;
+            font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #000000de;
+            background: #fff;
+        }
 
-.title-wrap { text-align: center }
-.title-wrap h1 { margin: 0; font-weight: 700; font-size: 34px; letter-spacing: -.02em }
-.subtitle {
-  margin-top: 4px; font-size: 14.5px;
-  text-shadow: 0 2px 4px rgba(0,0,0,.14), 0 4px 5px rgba(0,0,0,.12), 0 1px 10px rgba(0,0,0,.2)
-}
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 24px
+        }
 
-/* Social icons in straight line */
-.social{
-  list-style:none; margin:12px 0 0; padding:0;
-  display:flex; justify-content:center; align-items:center; gap:10px; line-height:0;
-}
-.social li{margin:0; padding:0; display:flex}
-.social a{
-  display:flex; align-items:center; justify-content:center;
-  width:48px; height:48px; border-radius:50%;
-  background:#fff; color:#000; text-decoration:none; font-weight:700; font-size:13px;
-  box-shadow:var(--shadow); overflow:hidden; border:1px solid var(--border); flex:0 0 auto;
-}
-.social a img{width:100%; height:100%; object-fit:cover; display:block}
+        .header {
+            position: relative;
+            color: #fff;
+            background: var(--header-bg)
+        }
 
-/* Centered navigation */
-.nav-wrap{
-  display:flex; justify-content:center; position:sticky; top:12px;
-  margin-top:-12px; padding:0 20px; z-index:100;
-}
-.nav{
-  display:flex; gap:14px; background:#fff; border-radius:22px;
-  box-shadow:var(--shadow); padding:0 12px; border:1px solid var(--border);
-}
-.nav a{
-  display:block; padding:10px 0; line-height:24px; font-size:16px; color:#000; text-decoration:none
-}
-.nav a.active{font-weight:700}
+        .header-inner {
+            position: relative;
+            min-height: 30vh;
+            padding: 22px 20px
+        }
 
-/* Main */
-main{min-height:60vh; padding:28px 0}
-.page-title{margin:0 0 8px; font-size:30px; letter-spacing:-.02em}
-.lead{color:#374151; margin:0 0 12px}
+        .avatar {
+            width: 144px;
+            height: 144px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            background: #ccc;
+        }
 
-/* Elongated project bars (single column) */
-.projects{
-  display:flex; flex-direction:column; gap:12px;
-}
-.project-bar{
-  border:1px solid var(--border); border-radius:12px; background:#fff; box-shadow:var(--shadow);
-  padding:14px 16px; cursor:pointer; user-select:none;
-  transition: box-shadow .15s ease, border-color .15s ease;
-}
-.project-bar:focus{ outline:2px solid #c7d2fe; outline-offset:2px }
-.project-bar:hover{
-  box-shadow:0 3px 6px #0000002f, 0 6px 10px #0000001a, 0 1px 14px #0003;
-  border-color:#d7dae0;
-}
-.project-top{
-  display:flex; align-items:flex-start; gap:12px;
-}
-.project-title{
-  font-weight:700; font-size:18px; margin:0; color:#0f172a;
-  flex:1 1 auto;
-}
-.project-time{
-  flex:0 0 auto; font-size:14px; color:#475569; white-space:nowrap;
-  display:flex; align-items:center; gap:10px;
-}
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
 
-/* Chevron indicator */
-.chevron{
-  width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent;
-  border-top:8px solid #475569; transition:transform .2s ease;
-}
-.project-bar.open .chevron{ transform:rotate(180deg) }
+        .title-wrap {
+            text-align: center
+        }
 
-/* One-line summary (always visible) */
-.project-desc{
-  margin:8px 0 0; color:#334155; line-height:1.45;
-  display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden;
-}
+        .title-wrap h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 34px;
+            letter-spacing: -.02em
+        }
 
-/* Hidden details dropdown */
-.project-details{
-  display:none; margin-top:10px; color:#1f2937; line-height:1.55;
-  border-top:1px dashed #e5e7eb; padding-top:10px;
-}
-.project-bar.open .project-details{ display:block }
+        .subtitle {
+            margin-top: 4px;
+            font-size: 14.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, .14), 0 4px 5px rgba(0, 0, 0, .12), 0 1px 10px rgba(0, 0, 0, .2)
+        }
 
-/* Optional scroll list for ongoing items */
-.scroll{
-  max-height:420px; overflow:auto; padding:16px; margin-top:16px;
-  border:1px solid var(--border); border-radius:8px; background:#fff; box-shadow:var(--shadow);
-}
+        .social {
+            list-style: none;
+            margin: 12px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            line-height: 0;
+        }
 
-footer{
-  padding:24px 0; border-top:1px solid var(--border);
-  background:#fff; text-align:center; color:#4b5563;
-}
+        .social li {
+            margin: 0;
+            padding: 0;
+            display: flex
+        }
 
-@media (max-width:540px){
-  .title-wrap h1{font-size:30px}
-  .avatar{width:132px; height:132px}
-  .nav{gap:12px}
-  .nav a{font-size:16px}
-  .social{gap:8px}
-  .project-title{font-size:17px}
-  .project-time{font-size:13px}
-}
+        .social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            flex: 0 0 auto;
+        }
 
-/* If JS is disabled, show details by default so content is accessible */
-noscript .project-details { display:block !important }
-</style> </head> <body> <!-- Blue upper section --> <header class="header"> <div class="header-inner container"> <div class="avatar"><img src="assets/dp.jpeg" alt="Portrait of Dhamotharan D"></div>
+        .social a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
 
-  <div class="title-wrap">
-    <h1><a href="index.html" style="color:#fff;text-decoration:none">Dhamotharan D</a></h1>
-    <div class="subtitle">B.S. and M.S., Biological Sciences — Department of Biotechnology, Bhupat &amp; Jyoti Mehta School of Biosciences, IIT Madras</div>
+        .nav-wrap {
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 12px;
+            margin-top: -12px;
+            padding: 0 20px;
+            z-index: 100;
+        }
 
-    <ul class="social">
-      <li><a aria-label="Google Scholar" href="#" target="_blank" rel="noopener"><img src="assets/google_scholar.png" alt="Google Scholar"></a></li>
-      <li><a aria-label="ORCID" href="#" target="_blank" rel="noopener"><img src="assets/orcid.png" alt="ORCID"></a></li>
-      <li><a aria-label="LinkedIn" href="#" target="_blank" rel="noopener"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
-      <li><a aria-label="GitHub" href="#" target="_blank" rel="noopener"><img src="assets/github.png" alt="GitHub"></a></li>
-      <li><a aria-label="Email" href="mailto:boneshwar.vk20@gmail.com"><img src="assets/gmail.png" alt="Email"></a></li>
-    </ul>
-  </div>
-</div>
+        .nav {
+            display: flex;
+            gap: 14px;
+            background: #fff;
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+            padding: 0 12px;
+            border: 1px solid var(--border);
+        }
 
-<div class="nav-wrap">
-  <nav class="nav" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="publications.html">Publications</a>
-    <a href="cv.html">CV</a>
-    <a class="active" href="projects.html">Projects</a>
-    <a href="experience.html">Experiences</a>
-  </nav>
-</div>
-</header> <!-- Projects content --> <main> <div class="container"> <h1 class="page-title">Projects</h1> <p class="lead">Elongated, single-column project bars with title, timeline, one-line summary, and expandable details.</p>
+        .nav a {
+            display: block;
+            padding: 10px 0;
+            line-height: 24px;
+            font-size: 16px;
+            color: #000;
+            text-decoration: none
+        }
 
-  <div class="projects">
-    <!-- Project: Language‑Agnostic Speaker Identification & Diarisation -->
-    <div class="project-bar" data-project-bar tabindex="0">
-      <div class="project-top">
-        <h3 class="project-title">Language‑Agnostic Speaker Identification & Diarisation; Transcription & Translation</h3>
-        <div class="project-time">
-          Jan 2024 – May 2024
-          <span class="chevron" aria-hidden="true"></span>
+        .nav a.active {
+            font-weight: 700
+        }
+
+        main {
+            min-height: 60vh;
+            padding: 28px 0
+        }
+
+        .page-title {
+            margin: 0 0 8px;
+            font-size: 30px;
+            letter-spacing: -.02em
+        }
+
+        .section-title {
+            margin: 22px 0 10px;
+            font-size: 22px;
+            letter-spacing: -.01em
+        }
+
+        .lead {
+            color: #374151;
+            margin: 0 0 12px
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .project-bar {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: var(--shadow);
+            padding: 14px 16px;
+            cursor: pointer;
+            user-select: none;
+            transition: box-shadow .15s ease, border-color .15s ease;
+        }
+
+        .project-bar:focus {
+            outline: 2px solid #c7d2fe;
+            outline-offset: 2px
+        }
+
+        .project-bar:hover {
+            box-shadow: 0 3px 6px #0000002f, 0 6px 10px #0000001a, 0 1px 14px #0003;
+            border-color: #d7dae0;
+        }
+
+        .project-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin: 0;
+            color: #0f172a;
+            flex: 1 1 auto;
+        }
+
+        .project-time {
+            flex: 0 0 auto;
+            font-size: 14px;
+            color: #475569;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chevron {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid #475569;
+            transition: transform .2s ease;
+        }
+
+        .project-bar.open .chevron {
+            transform: rotate(180deg)
+        }
+
+        .project-desc {
+            margin: 8px 0 0;
+            color: #334155;
+            line-height: 1.45;
+        }
+
+        .project-details {
+            display: none;
+            margin-top: 10px;
+            color: #1f2937;
+            line-height: 1.55;
+            border-top: 1px dashed #e5e7eb;
+            padding-top: 10px;
+        }
+
+        .project-details ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .project-bar.open .project-details {
+            display: block
+        }
+
+        footer {
+            padding: 24px 0;
+            border-top: 1px solid var(--border);
+            background: #fff;
+            text-align: center;
+            color: #4b5563;
+        }
+
+        @media (max-width:540px) {
+            .title-wrap h1 {
+                font-size: 30px
+            }
+
+            .avatar {
+                width: 132px;
+                height: 132px
+            }
+
+            .nav {
+                gap: 12px
+            }
+
+            .nav a {
+                font-size: 16px
+            }
+
+            .social {
+                gap: 8px
+            }
+
+            .project-title {
+                font-size: 17px
+            }
+
+            .project-time {
+                font-size: 13px
+            }
+        }
+
+        noscript .project-details {
+            display: block !important
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner container">
+            <div class="avatar"><img src="assets/dp.jpeg" alt="Portrait of Dhamotharan D"></div>
+            <div class="title-wrap">
+                <h1><a href="index.html" style="color:#fff;text-decoration:none">Dhamotharan D</a></h1>
+                <div class="subtitle">B. Tech in Metallurgical and Materials Engineering & M. Tech in Advanced Materials and Nanotechnology, IIT Madras</div>
+                <ul class="social">
+                    <li><a aria-label="Google Scholar" href="#" target="_blank" rel="noopener"><img src="assets/google_scholar.png" alt="Google Scholar"></a></li>
+                    <li><a aria-label="ORCID" href="#" target="_blank" rel="noopener"><img src="assets/orcid.png" alt="ORCID"></a></li>
+                    <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/dhamotharan-d-/" target="_blank" rel="noopener"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
+                    <li><a aria-label="GitHub" href="#" target="_blank" rel="noopener"><img src="assets/github.png" alt="GitHub"></a></li>
+                    <li><a aria-label="Email" href="mailto:dhamoddharan.in@gmail.com"><img src="assets/gmail.png" alt="Email"></a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <p class="project-desc">Multilingual speaker ID + diarisation with downstream transcription/translation using fine‑tuned models.</p>
-      <div class="project-details">
-        AI solution for robust speaker identification and diarisation across multiple languages and dialects, followed by accurate transcription and translation. Built with in‑house fine‑tuned models optimized for noisy, real‑world audio; adaptable to call centers, media archives, and meetings. Pipeline covers VAD, embeddings, clustering/diarisation, ASR, and NMT post‑processing.
-      </div>
-    </div>
-
-    <!-- Project: MaskedAlign -->
-    <div class="project-bar" data-project-bar tabindex="0">
-      <div class="project-top">
-        <h3 class="project-title">MaskedAlign: Multiple Sequence Alignment using Transformer</h3>
-        <div class="project-time">
-          Jan 2024 – May 2024
-          <span class="chevron" aria-hidden="true"></span>
+        <div class="nav-wrap">
+            <nav class="nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="publications.html">Publications</a>
+                <a href="cv.html">CV</a>
+                <a class="active" href="projects.html">Projects</a>
+		<a href="achievements.html">Achievements</a>
+                <a href="experience.html">Experiences</a>
+            </nav>
         </div>
-      </div>
-      <p class="project-desc">Masked transformer for MSA that improves alignment quality while reducing runtime overhead.</p>
-      <div class="project-details">
-        Developed a seq‑to‑seq masked transformer (inspired by Masked Trajectory Transformer and BetaAlign) to enhance MSA generalization. PyTorch implementation beat strong baselines and cut runtime by up to 13% via decoding refinements and efficient attention. Ablations on masking schedules and positional schemes.
-      </div>
-    </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="page-title">Projects</h1>
+            <p class="lead">A selection of my research and academic projects.</p>
 
-    <!-- Project: Synthetic Medical and IR Image Generation -->
-    <div class="project-bar" data-project-bar tabindex="0">
-      <div class="project-top">
-        <h3 class="project-title">Synthetic Medical and IR Image Generation</h3>
-        <div class="project-time">
-          Nov 2023 – Mar 2024
-          <span class="chevron" aria-hidden="true"></span>
+            <h2 class="section-title">Research Projects</h2>
+            <div class="projects">
+                <div class="project-bar" data-project-bar tabindex="0">
+                    <div class="project-top">
+                        [cite_start]<h3 class="project-title">Novel rapid and room temperature synthesis of metal nitrides [cite: 44]</h3>
+                        <div class="project-time">Jan 2025 – Present <span class="chevron" aria-hidden="true"></span></div>
+                    </div>
+                    [cite_start]<p class="project-desc">Working on a novel, rapid, room-temperature synthesis route for nitrides by optimizing the solid-state metathesis process[cite: 46].</p>
+                    <div class="project-details">
+                        [cite_start]<strong>Guide:</strong> Prof. Ravikumar, Dept. of Metallurgical and Materials Engineering, IIT Madras[cite: 46].<br>
+                        [cite_start]This approach shows promise for both transition metal-based systems and post-transition metal nitrides such as gallium nitride[cite: 47].
+                    </div>
+                </div>
+
+                <div class="project-bar" data-project-bar tabindex="0">
+                    <div class="project-top">
+                        [cite_start]<h3 class="project-title">Flexible Ceramic-Based Triboelectric Nanogenerators for Efficient Waste Mechanical Energy [cite: 48]</h3>
+                        <div class="project-time">Aug 2023 – Present <span class="chevron" aria-hidden="true"></span></div>
+                    </div>
+                    [cite_start]<p class="project-desc">Pioneered flexible ceramic TENGs with high stability and developed scalable thin-film protocols for production[cite: 50, 51].</p>
+                    <div class="project-details">
+                        [cite_start]<strong>Guide:</strong> Prof. Ravikumar, Dept. of Metallurgical and Materials Engineering, IIT Madras[cite: 48].<br>
+                        <ul>
+                            [cite_start]<li>Pioneered flexible ceramic TENGs via in situ fabricated material-electrode synergy, achieving <3mm bend radius with stability retention over 1000 cycles[cite: 50].</li>
+                            [cite_start]<li>Developed scalable thin-film protocols enabling high-throughput production of such energy harvesters[cite: 51].</li>
+                            [cite_start]<li>Engineered ceramic-SiOC interfaces to control dielectric polarization and surface charge distribution, achieving sustained high-output TENG performance[cite: 52]. Currently drafting the work for manuscript submission.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-bar" data-project-bar tabindex="0">
+                    <div class="project-top">
+                        [cite_start]<h3 class="project-title">Electrocatalytic green ammonia synthesis using LiZnVO4/LiVO3 nanocomposite [cite: 53]</h3>
+                        <div class="project-time">Jun 2024 – Aug 2024 <span class="chevron" aria-hidden="true"></span></div>
+                    </div>
+                    [cite_start]<p class="project-desc">Synthesized novel nanocomposites for green ammonia synthesis, achieving 45% Faradaic Efficiency in proton-rich electrolytes[cite: 55, 59].</p>
+                    <div class="project-details">
+                        [cite_start]<strong>Guide:</strong> Prof. Sanjay Mathur, University of Cologne, Germany[cite: 53].<br>
+                        <ul>
+                            [cite_start]<li>Synthesized LiZnVO4/LiVO3 nanocomposites using a novel silazane-based sol-gel method[cite: 55].</li>
+                            [cite_start]<li>Studied phases evolution using XRD, FT-IR with temperature dependency[cite: 56]. [cite_start]Employed XPS, SEM, Raman and TG-DSC for structural analysis[cite: 57].</li>
+                            [cite_start]<li>Overcame intrinsic HER limitations in NRR via a novel Li-engineered composite catalyst, achieving 45% Faradaic Efficiency for NH3 yielding 53µg h⁻¹ mg⁻¹cat in proton-rich electrolytes[cite: 59].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-bar" data-project-bar tabindex="0">
+                    <div class="project-top">
+                        [cite_start]<h3 class="project-title">Electrocatalytic behaviour of Cu-based nanowires for Nitrate Reduction [cite: 61]</h3>
+                        <div class="project-time">Feb 2023 – Jul 2023 <span class="chevron" aria-hidden="true"></span></div>
+                    </div>
+                    [cite_start]<p class="project-desc">Synthesized and compared various Cu-based nanowires for nitrate reduction, achieving enhanced sensitivity and lower detection limits[cite: 63, 65, 66].</p>
+                    <div class="project-details">
+                        [cite_start]<strong>Guide:</strong> Prof. Lakshman Neelakantan, Dept. of Metallurgical and Materials Engineering, IIT Madras[cite: 63].<br>
+                        <ul>
+                            [cite_start]<li>Synthesized Cu nanowires (78±10nm diameter) via galvanic displacement in AAO templates with >90% pore filling[cite: 63].</li>
+                            [cite_start]<li>Fabricated Cu-Pd nanowires through DC electrodeposition[cite: 64].</li>
+                            [cite_start]<li>Compared nitrate reduction performance of templated Cu, Cu20Pd80, and functionalized Cu nanowires, achieving enhanced sensitivity (50 µA/µM) and a lower detection limit (10 nM) with the functionalized system[cite: 65, 66].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-bar" data-project-bar tabindex="0">
+                    <div class="project-top">
+                        [cite_start]<h3 class="project-title">Self-Ordered Nano-porous AAO templates Fabrication by Mild and Hard Anodization [cite: 68]</h3>
+                        <div class="project-time">Jul 2022 – Dec 2022 <span class="chevron" aria-hidden="true"></span></div>
+                    </div>
+                    [cite_start]<p class="project-desc">Fabricated nano-porous AAO templates using mild and hard anodization with tunable pore diameters and scalable processes[cite: 68, 69].</p>
+                    <div class="project-details">
+                        [cite_start]<strong>Guide:</strong> Prof. Lakshman Neelakantan, Dept. of Metallurgical and Materials Engineering, IIT Madras[cite: 68].<br>
+                        <ul>
+                            [cite_start]<li>Executed Mild Anodization with tunable pore diameter from 20 nm to 80 nm via a two-step process[cite: 68].</li>
+                            [cite_start]<li>Conducted systematic Hard Anodization trials to advance process scalability and reliable high-speed fabrication[cite: 69].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Course Projects</h2>
+            <div class="projects">
+                <div class="project-bar" data-project-bar tabindex="0">
+                    <div class="project-top">
+                        [cite_start]<h3 class="project-title">Fabrication and characterization of Permalloy thin films via DC sputtering [cite: 75]</h3>
+                        <div class="project-time">Jan 2024 – Apr 2024 <span class="chevron" aria-hidden="true"></span></div>
+                    </div>
+                    [cite_start]<p class="project-desc">Fabricated and characterized Permalloy thin films, confirming soft magnetic behavior via VSM[cite: 77, 79].</p>
+                    <div class="project-details">
+                        [cite_start]Fabricated Permalloy (Fe₂₀Ni₈₀) thin films (~316±20 nm) on glass substrates using DC sputtering[cite: 77]. [cite_start]Confirmed structural properties via XRD and morphology via SEM[cite: 78]. [cite_start]Magnetic characterization using VSM revealed soft magnetic behavior, and key parameters were extracted from M-H curves[cite: 79, 80].
+                    </div>
+                </div>
+
+                <div class="project-bar" data-project-bar tabindex="0">
+                    <div class="project-top">
+                        [cite_start]<h3 class="project-title">Synthesis and Characterization of InSb thin films via E-beam evaporation [cite: 81]</h3>
+                        <div class="project-time">Jan 2024 – Apr 2024 <span class="chevron" aria-hidden="true"></span></div>
+                    </div>
+                    [cite_start]<p class="project-desc">Synthesized and deposited InSb thin films, confirming p-type conductivity due to In vacancies[cite: 83, 86].</p>
+                    <div class="project-details">
+                        [cite_start]Synthesized Indium Antimonide (InSb) pellets and deposited thin films (~980±17 nm) using electron beam evaporation[cite: 83]. [cite_start]XRD confirmed crystallographic growth, and SEM-EDS revealed film composition of In₄₇Sb₅₃[cite: 84, 85]. [cite_start]Temperature-dependent four-probe and Hall measurements confirmed p-type conductivity due to In vacancies, highlighting unintentional doping[cite: 85, 86].
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <p class="project-desc">Diffusion + edge‑guided GAN pipelines for realistic medical/thermal IR imagery and better separability.</p>
-      <div class="project-details">
-        Industrial project (CVRDE, DRDO). Enhanced diffusion models with MixNMatch and latent controls for improved class separability/quality. Built RGB→Thermal IR translation using edge‑guided GANs to preserve boundaries and highlights. Improved downstream detection stability and reduced data collection needs.
-      </div>
-    </div>
+    </main>
+    <footer>© <span id="year"></span> Dhamotharan D</footer>
+    <script src="main.js"></script>
+</body>
 
-    <!-- Project: Traffic Bot -->
-    <div class="project-bar" data-project-bar tabindex="0">
-      <div class="project-top">
-        <h3 class="project-title">Traffic Bot: Real‑time Violation Detection</h3>
-        <div class="project-time">
-          Jun 2022 – Feb 2023
-          <span class="chevron" aria-hidden="true"></span>
-        </div>
-      </div>
-      <p class="project-desc">YOLOv5-based helmet, triple‑riding, and speeding detection on Jetson Nano over CCTV streams.</p>
-      <div class="project-details">
-        End‑to‑end deployment for multi‑class violation detection (F1 0.79) integrated with existing CCTV infrastructure. Achieved 89% accuracy in field tests. Optimized for low‑power devices with batching and stream handling for continuous inference.
-      </div>
-    </div>
-  </div>
-
-  <div class="scroll" style="margin-top:16px">
-    <h3>Ongoing Work</h3>
-    <ul style="margin:0;padding-left:18px">
-      <li>Dissertation: Title — 2–4 lines summary.</li>
-      <li>Project A — short note and link.</li>
-      <li>Project B — short note and link.</li>
-    </ul>
-  </div>
-</div>
-</main> <footer>© <span id="year"></span> Dhamotharan D</footer> <!-- Make sure main.js is loaded after the markup --> <script src="assets/main.js"></script>
-<noscript><style>.project-details{display:block!important}</style></noscript>
-<script> // Keep footer year if you had it inline previously; can be moved to main.js as well (function(){var y=document.getElementById('year'); if(y){ y.textContent=new Date().getFullYear(); }})(); </script> </body> </html>
+</html>

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Boneshwar V K — Publications</title>
+    <title>Dhamotharan D — Publications</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -16,7 +16,7 @@
             --header-bg: #2f5369;
         }
 
-        text text text html {
+        html {
             scroll-behavior: smooth
         }
 
@@ -37,7 +37,6 @@
             padding: 0 24px
         }
 
-        /* Blue upper section — match index/cv/projects aspect */
         .header {
             position: relative;
             color: #fff;
@@ -84,7 +83,6 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, .14), 0 4px 5px rgba(0, 0, 0, .12), 0 1px 10px rgba(0, 0, 0, .2)
         }
 
-        /* Social icons — single straight row */
         .social {
             list-style: none;
             margin: 12px 0 0;
@@ -127,7 +125,6 @@
             display: block
         }
 
-        /* Centered navigation */
         .nav-wrap {
             display: flex;
             justify-content: center;
@@ -161,7 +158,6 @@
             font-weight: 700
         }
 
-        /* Main */
         main {
             min-height: 60vh;
             padding: 28px 0
@@ -173,99 +169,40 @@
             letter-spacing: -.02em
         }
 
+        .section-title {
+            margin: 22px 0 10px;
+            font-size: 22px;
+            letter-spacing: -.01em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 4px;
+        }
+
         .lead {
             color: #374151;
             margin: 0 0 12px
         }
 
-        /* Publications list panel (kept as-is) */
-        .pubs-panel {
-            max-height: 520px;
-            overflow: auto;
-            padding: 16px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: var(--shadow);
+        .pub-item {
+            margin-bottom: 24px;
         }
 
-        .pubs-panel ol {
-            margin: 0;
-            padding-left: 18px
+        .pub-item p {
+            margin: 4px 0;
+            line-height: 1.5;
         }
 
-        .pubs-panel li {
-            margin: 12px 0
-        }
-
-        .pubs-panel .links a {
-            color: #1f6fd6;
-            text-decoration: none;
-            border-bottom: 1px dashed #a7c0ff;
-            margin-right: 10px
-        }
-
-        .pubs-panel .links a:hover {
-            text-decoration: underline
-        }
-
-        /* Abstract block (no scroll wrapper around PDF) */
-        .abstract-block {
-            margin-top: 10px;
-            padding: 12px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background: #fafafa;
-        }
-
-        .abstract-toggle {
-            margin: 8px 0 10px;
-            display: inline-block;
-            font-size: 14px;
-            color: #1f6fd6;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .abstract-content {
-            display: none;
-            color: #1f2937;
-            line-height: 1.55;
-        }
-
-        .abstract-content.open {
-            display: block
-        }
-
-        .abstract-heading {
+        .pub-title {
             font-weight: 700;
-            margin: 0 0 6px
+            font-size: 18px;
         }
 
-        /* Direct PDF embed, full width, larger height (no internal scroll container) */
-        .pub-pdf {
-            margin-top: 12px;
-            border: 1px dashed var(--border);
-            border-radius: 6px;
-            background: #ffffff;
-            overflow: hidden;
+        .pub-authors, .pub-info {
+            font-style: italic;
+            color: #374151;
         }
 
-        .pub-pdf iframe {
-            width: 100%;
-            height: 800px;
-            /* Increased for readability */
-            display: block;
-            border: none;
-            background: #fff;
-        }
-
-        .pub-pdf .caption {
-            font-size: 13px;
-            color: #475569;
-            margin: 6px auto 0;
-            text-align: center;
-            padding: 6px 8px 10px;
+        .pub-status {
+            color: #166534;
         }
 
         footer {
@@ -297,12 +234,6 @@
             .social {
                 gap: 8px
             }
-
-            .pub-pdf iframe {
-                height: 520px
-            }
-
-            /* Taller on mobile than before */
         }
     </style>
 </head>
@@ -310,16 +241,16 @@
 <body>
     <header class="header">
         <div class="header-inner container">
-            <div class="avatar"><img src="assets/dp.jpeg" alt="Portrait of Boneshwar V K"></div>
+            <div class="avatar"><img src="assets/dp.jpeg" alt="Portrait of Dhamotharan D"></div>
             <div class="title-wrap">
-                <h1><a href="index.html" style="color:#fff;text-decoration:none">Boneshwar V K</a></h1>
-                <div class="subtitle">B.S. and M.S., Biological Sciences — Department of Biotechnology, Bhupat &amp; Jyoti Mehta School of Biosciences, IIT Madras</div>
+                <h1><a href="index.html" style="color:#fff;text-decoration:none">Dhamotharan D</a></h1>
+                <div class="subtitle">B. Tech in Metallurgical and Materials Engineering & M. Tech in Advanced Materials and Nanotechnology, IIT Madras</div>
                 <ul class="social">
                     <li><a aria-label="Google Scholar" href="#" target="_blank" rel="noopener"><img src="assets/google_scholar.png" alt="Google Scholar"></a></li>
                     <li><a aria-label="ORCID" href="#" target="_blank" rel="noopener"><img src="assets/orcid.png" alt="ORCID"></a></li>
-                    <li><a aria-label="LinkedIn" href="#" target="_blank" rel="noopener"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
+                    <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/dhamotharan-d-/" target="_blank" rel="noopener"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
                     <li><a aria-label="GitHub" href="#" target="_blank" rel="noopener"><img src="assets/github.png" alt="GitHub"></a></li>
-                    <li><a aria-label="Email" href="mailto:boneshwar.vk20@gmail.com"><img src="assets/gmail.png" alt="Email"></a></li>
+                    <li><a aria-label="Email" href="mailto:dhamoddharan.in@gmail.com"><img src="assets/gmail.png" alt="Email"></a></li>
                 </ul>
             </div>
         </div>
@@ -329,87 +260,47 @@
                 <a class="active" href="publications.html">Publications</a>
                 <a href="cv.html">CV</a>
                 <a href="projects.html">Projects</a>
+		<a href="achievements.html">Achievements</a>
                 <a href="experience.html">Experiences</a>
             </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <h1 class="page-title">Publications</h1>
-            <p class="lead">Selected publications and preprints. Links to PDFs, DOIs, and project materials where available.</p>
-            <div class="pubs-panel">
-                <ol>
-                    <li>
-                        <i>Boneshwar, V. K., Deepesh Agarwal, Bala Natarajan, and Babji Srinivasan. "Inductive graph neural network framework for imputation of single-cell RNA sequencing data." Computers & Chemical Engineering 195 (2025): 109031</i>
-                        <span class="links">
-                            <a href="docs/paper.pdf" target="_blank" rel="noopener"><i>(PDF)</i></a>
-                        </span>
-
-                            <!-- Abstract + direct PDF embed (no scrollable wrapper) -->
-                            <!-- Abstract + image-based PDF preview with zoom-on-click -->
-                            <div class="abstract-block">
-                            <span class="abstract-toggle" onclick="(function(el){
-                                var c = el.nextElementSibling;
-                                c.classList.toggle('open');
-                                el.textContent = c.classList.contains('open') ? 'Hide abstract' : 'Show abstract';
-                            })(this)">Show abstract</span>
-
-                            <div class="abstract-content">
-                                <p class="abstract-heading">Abstract</p>
-                                <p>
-                                Single-cell RNA sequencing (scRNA-seq) enables fine-grained analysis of cellular processes but suffers from sparsity and noise. We present an inductive graph learning framework that constructs node embeddings from subgraphs, improving scalability while achieving strong imputation and clustering performance across multiple scRNA-seq datasets. The method demonstrates gains in Silhouette and ARI scores with reduced runtime and error, supporting downstream applications in trajectory inference and pathway analysis.
-                                </p>
-
-                                <!-- Image container with zoom functionality -->
-                                <div id="image-container" style="overflow:auto; width:600px; height:600px; border:1px solid #223049; 
-                                            border-radius:12px; background:#0c1118; position:relative; cursor:crosshair; text-align:left;">
-                                <img id="image" src="assets/image.png" alt="Publication page" 
-                                    style="transform: scale(0.4); transform-origin: top left; 
-                                            transition: transform 0.3s ease; position:relative; display:inline-block;">
-
-                                </div>
-                                <div class="caption"> Overview preview of InductiveGNNt</div>
-                            </div>
-                            </div>
-
-                            <script>
-                            const container = document.getElementById("image-container");
-                            const image = document.getElementById("image");
-
-                            let scale = 1;
-                            const zoomFactor = 2; // 2x zoom
-                            let offsetX = 0;
-                            let offsetY = 0;
-
-                            container.addEventListener("click", (event) => {
-                            const rect = container.getBoundingClientRect();
-                            const clickX = (event.clientX - rect.left - offsetX) / scale;
-                            const clickY = (event.clientY - rect.top - offsetY) / scale;
-
-                            if (scale === 1) {
-                                scale = zoomFactor;
-                                offsetX = container.clientWidth / 2 - clickX * scale;
-                                offsetY = container.clientHeight / 2 - clickY * scale;
-                            } else {
-                                scale = 1;
-                                offsetX = 0;
-                                offsetY = 0;
-                            }
-                            image.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
-                            });
-                            </script>
-
-                            </div>
-
-                    </li>
-                </ol>
+            <h1 class="page-title">Publications & Presentations</h1>
+            <p class="lead">A list of my patents, manuscripts, and conference presentations.</p>
+            
+            <h2 class="section-title">Patents</h2>
+            <div class="pub-item">
+                <p class="pub-title">A flexible ceramic nanogenerator and a method of manufacture thereof</p>
+                <p class="pub-authors"><strong>Co-inventors:</strong> Prof. Ravikumar, Mr. Abishek Muthukumar, Dr. Ganesh Babu</p>
+                <p><strong>Application No:</strong> 202441060984</p>
+                <p>Developed and filed a patent on the methodology for fabricating highly flexible, easily scalable, and complete ceramic systems designed for nanogenerators, specifically triboelectric nanogenerators.</p>
             </div>
+            
+            <h2 class="section-title">Papers</h2>
+            <div class="pub-item">
+                <p class="pub-title">LiVO3/LiZnVO4 Nanocomposite: High performance Electrocatalyst for Ambient Nitrogen Reduction to Ammonia</p>
+                <p class="pub-authors"><strong>Authors:</strong> Naina Goyal, Dhamotharan D., Fabio Pires, Ravikumar, Sanjay Mathur</p>
+                <p class="pub-status">Manuscript under review in Advanced Engineering Materials (ID: adem.202501627).</p>
+            </div>
+
+            <h2 class="section-title">Conference Presentations</h2>
+            <div class="pub-item">
+                 <p class="pub-title">International Symposium on Emerging Research in Advanced Materials (ISERAM-1)</p>
+                 <p class="pub-info">June 2025 | IIT Madras & Nagoya University</p>
+                 <p>Presented an oral talk titled "Flexible ceramic based tribo-positive electrodes for durable and high-efficiency wearable energy harvesting."</p>
+            </div>
+             <div class="pub-item">
+                 <p class="pub-title">International Conference on Advanced Ceramics for Sustainability</p>
+                 <p class="pub-info">November 2024 | IIT Madras</p>
+                 <p>Secured third place for the oral presentation "High selectivity electrocatalytic green ammonia synthesis via LiZnVO4/LiVO3 biphasic compound under acidic conditions" in the student session.</p>
+            </div>
+
         </div>
     </main>
-    <footer>© <span id="year"></span> Boneshwar V K</footer>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <footer>© <span id="year"></span> Dhamotharan D</footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
