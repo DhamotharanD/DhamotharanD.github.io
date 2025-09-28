@@ -5,81 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dhamotharan D — Experiences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --container: 752px;
-            --border: #e5e7eb;
-            --shadow: 0 2px 4px #00000024, 0 4px 5px #0000001f, 0 1px 10px #0003;
-            --header-bg: #2f5369;
+            --border: #dee2e6;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --text-primary: #212529;
+            --text-secondary: #495057;
+            --background-light: #f8f9fa;
         }
-        html { scroll-behavior: smooth }
-        * { box-sizing: border-box }
-        body { margin: 0; font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #000000de; background: #fff; }
-        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px }
-        .header { position: relative; color: #fff; background: var(--header-bg) }
-        .header-inner { position: relative; min-height: 30vh; padding: 22px 20px }
-        .avatar { width: 144px; height: 144px; margin: 0 auto 10px; border-radius: 50%; border: 5px solid #fff; box-shadow: var(--shadow); overflow: hidden; background: #ccc; }
-        .avatar img { width: 100%; height: 100%; object-fit: cover }
-        .title-wrap { text-align: center }
-        .title-wrap h1 { margin: 0; font-weight: 700; font-size: 34px; letter-spacing: -.02em }
-        .subtitle { margin-top: 4px; font-size: 14.5px; text-shadow: 0 2px 4px rgba(0,0,0,.14), 0 4px 5px rgba(0,0,0,.12), 0 1px 10px rgba(0,0,0,.2) }
-        .social { list-style: none; margin: 12px 0 0; padding: 0; display: flex; justify-content: center; align-items: center; gap: 10px; line-height: 0; }
-        .social li { margin: 0; padding: 0; display: flex }
-        .social a { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: #fff; color: #000; text-decoration: none; font-weight: 700; font-size: 13px; box-shadow: var(--shadow); overflow: hidden; border: 1px solid var(--border); flex: 0 0 auto; }
-        .social a img { width: 100%; height: 100%; object-fit: cover; display: block }
-        .nav-wrap { display: flex; justify-content: center; position: sticky; top: 12px; margin-top: -12px; padding: 0 20px; z-index: 100; }
-        .nav { display: flex; gap: 14px; background: #fff; border-radius: 22px; box-shadow: var(--shadow); padding: 0 12px; border: 1px solid var(--border); }
-        .nav a { display: block; padding: 10px 0; line-height: 24px; font-size: 16px; color: #000; text-decoration: none }
-        .nav a.active { font-weight: 700 }
-        main { min-height: 60vh; padding: 28px 0 }
-        .page-title { margin: 0 0 8px; font-size: 30px; letter-spacing: -.02em }
-        .lead { color: #374151; margin: 0 0 12px }
-        .section-title { margin: 22px 0 10px; font-size: 22px; letter-spacing: -.01em }
-        .experiences { display: flex; flex-direction: column; gap: 12px; }
-        .exp-bar { border: 1px solid var(--border); border-radius: 12px; background: #fff; box-shadow: var(--shadow); padding: 18px 18px; transition: box-shadow .15s ease, border-color .15s ease; }
-        .exp-bar-toggle { cursor: pointer; user-select: none; }
-        .exp-bar:focus-within { outline: 2px solid #c7d2fe; outline-offset: 2px }
-        .exp-bar:hover { box-shadow: 0 3px 6px #0000002f, 0 6px 10px #0000001a, 0 1px 14px #0003; border-color: #d7dae0; }
-        .exp-top { display: flex; align-items: flex-start; gap: 12px; }
-        .exp-title { font-weight: 700; font-size: 18px; margin: 0; color: #0f172a; flex: 1 1 auto; }
-        .exp-time { flex: 0 0 auto; font-size: 14px; color: #475569; white-space: nowrap; display: flex; align-items: center; gap: 10px; }
-        .chevron { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid #475569; transition: transform .2s ease; }
-        .exp-bar.open .chevron { transform: rotate(180deg) }
-        .exp-desc { margin: 10px 0 0; color: #334155; line-height: 1.5; }
-        .exp-details { display: none; margin-top: 12px; color: #1f2937; line-height: 1.55; border-top: 1px dashed #e5e7eb; padding-top: 12px; }
-        .exp-details ul { padding-left: 20px; margin: 0; }
-        .exp-bar.open .exp-details { display: block }
-        footer { padding: 24px 0; border-top: 1px solid var(--border); background: #fff; text-align: center; color: #4b5563; }
-        @media (max-width:540px) {
-            .title-wrap h1 { font-size: 30px }
-            .avatar { width: 132px; height: 132px }
-            .nav { gap: 12px }
-            .nav a { font-size: 16px }
-            .social { gap: 8px }
-        }
-        noscript .exp-details { display: block !important }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--text-primary); background-color: #fff; font-size: 15px; line-height: 1.6; font-weight: 300; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+        .header { position: relative; color: #fff; padding-top: 60px; padding-bottom: 60px; text-align: center; background-image: url('docs/background.jpg'); background-size: cover; background-position: center; }
+        .header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 1; }
+        .header-inner { position: relative; z-index: 2; }
+        .avatar { width: 160px; height: 160px; margin: 0 auto 16px; border-radius: 50%; border: 4px solid rgba(255, 255, 255, 0.9); box-shadow: var(--shadow-md); overflow: hidden; }
+        .avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .title-wrap h1 { font-size: 38px; font-weight: 700; letter-spacing: -1px; margin: 0; }
+        .title-wrap h1 a { color: #fff; text-decoration: none; }
+        .subtitle { font-size: 15px; font-weight: 400; margin-top: 8px; color: rgba(255, 255, 255, 0.9); }
+        .social { list-style: none; margin-top: 20px; display: flex; justify-content: center; gap: 12px; }
+        .social a { display: flex; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.9); box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .social a:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .social img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        .nav-wrap { position: sticky; top: 12px; z-index: 100; display: flex; justify-content: center; }
+        .nav { display: flex; gap: 8px; background: #fff; border-radius: 22px; box-shadow: var(--shadow-md); padding: 8px; border: 1px solid var(--border); }
+        .nav a { padding: 8px 16px; font-size: 14px; font-weight: 400; color: var(--text-secondary); text-decoration: none; border-radius: 16px; transition: background-color 0.2s ease, color 0.2s ease; }
+        .nav a:hover { background-color: #f1f3f5; }
+        .nav a.active { background-color: #000; color: #fff; font-weight: 700; }
+        main { padding: 50px 0; }
+        .page-title { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+        .lead { font-size: 18px; color: var(--text-secondary); margin-bottom: 40px; font-weight: 300; }
+        .section-title { font-size: 24px; font-weight: 700; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .exp-card { background-color: #fff; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; transition: box-shadow 0.2s ease; }
+        .exp-card:hover { box-shadow: var(--shadow-md); }
+        .exp-header { padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .exp-header-toggle { cursor: pointer; }
+        .exp-title { font-size: 18px; font-weight: 700; color: var(--text-primary); }
+        .exp-time { font-size: 14px; color: var(--text-secondary); font-weight: 400; white-space: nowrap; }
+        .exp-summary { padding: 0 20px 16px 20px; font-size: 15px; color: var(--text-secondary); }
+        .exp-details { display: none; padding: 16px 20px; border-top: 1px dashed var(--border); }
+        .exp-details ul { list-style-position: inside; padding-left: 0; }
+        .exp-details li { margin-bottom: 8px; }
+        .chevron { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--text-secondary); transition: transform .2s ease; margin-left: 12px; }
+        .exp-card.open .chevron { transform: rotate(180deg); }
+        .exp-card.open .exp-details { display: block; }
+        footer { padding: 24px 0; border-top: 1px solid var(--border); text-align: center; color: #6c757d; }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="header-inner container">
-            <div class="avatar"><img src="assets/my_photo.jpeg" alt="Portrait of Dhamotharan D"></div>
+        <div class="header-inner">
+             <div class="avatar"><img src="assets/portrait.png" alt="Portrait of Dhamotharan D"></div>
             <div class="title-wrap">
-                <h1><a href="index.html" style="color:#fff;text-decoration:none">Dhamotharan D</a></h1>
-                <div class="subtitle">
-		 B. Tech in Metallurgical and Materials Engineering <br> Integrated M. Tech in Advanced Materials and Nanotechnology 
-		</div>
+                <h1><a href="index.html">Dhamotharan D</a></h1>
+                <div class="subtitle">Materials Science & Nanotechnology Researcher</div>
                 <ul class="social">
                     <li><a aria-label="Google Scholar" href="#" target="_blank" rel="noopener"><img src="assets/google_scholar.png" alt="Google Scholar"></a></li>
-                    <li><a aria-label="ORCID" href="#" target="_blank" rel="noopener"><img src="assets/orcid.png" alt="ORCID"></a></li>
+                    <li><a aria-label="ORCID" href="#" target="_blank" rel="noopener"><img src="assets-orcid.png" alt="ORCID"></a></li>
                     <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/dhamotharan-d-/" target="_blank" rel="noopener"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
                     <li><a aria-label="GitHub" href="#" target="_blank" rel="noopener"><img src="assets/github.png" alt="GitHub"></a></li>
                     <li><a aria-label="Email" href="mailto:dhamoddharan.in@gmail.com"><img src="assets/gmail.png" alt="Email"></a></li>
                 </ul>
             </div>
-        </div>
+        </header>
         <div class="nav-wrap">
             <nav class="nav" aria-label="Primary">
                 <a href="index.html">Home</a>
@@ -90,59 +83,58 @@
                 <a class="active" href="experience.html">Experiences</a>
             </nav>
         </div>
-    </header>
+
     <main>
         <div class="container">
             <h1 class="page-title">Experiences</h1>
             <p class="lead">My professional and leadership experiences.</p>
+
             <h2 class="section-title">Professional Experience</h2>
-            <div class="experiences">
-                <div class="exp-bar" data-exp tabindex="0">
-                    <div class="exp-bar-toggle">
-                        <div class="exp-top">
-                            <h3 class="exp-title">R&D Intern — The Titan Company Jewellery Division</h3>
-                            <div class="exp-time">May 2022 – Jul 2022 <span class="chevron" aria-hidden="true"></span></div>
-                        </div>
-                        <p class="exp-desc">Contributed to developing a cost-efficient manufacturing route for gold bangles and optimized the production of 18K white gold rods.</p>
+            <div class="exp-card" data-exp-card>
+                <div class="exp-header exp-header-toggle">
+                    <div>
+                        <div class="exp-title">R&D Intern — The Titan Company Jewellery Division</div>
+                        <p class="exp-summary">Contributed to developing a cost-efficient manufacturing route for gold bangles.</p>
                     </div>
-                    <div class="exp-details">
-                        <ul>
-                            <li>Contributed to a project aimed at developing a cost and time-efficient manufacturing route for gold bangle production by replacing conventional methods with continuous casting of a hollow cylindrical product.</li>
-                            <li>Optimized production of 18K white gold rods (3-8mm diameter) for Nick plate applications using vacuum induction melting, reducing purity deviations, improving yield, and lowering costs.</li>
-                        </ul>
-                    </div>
+                    <div class="exp-time">May 2022 – Jul 2022 <span class="chevron"></span></div>
+                </div>
+                <div class="exp-details">
+                    <ul>
+                        <li>Developed a cost-efficient manufacturing route for gold bangles by replacing conventional methods with continuous casting.</li>
+                        <li>Optimized production of 18K white gold rods using vacuum induction melting, improving yield and lowering costs.</li>
+                    </ul>
                 </div>
             </div>
+
             <h2 class="section-title">Positions of Responsibility</h2>
-            <div class="experiences">
-                <div class="exp-bar">
-                    <div class="exp-top">
-                        <h3 class="exp-title">Strategist, Saarang Nova, IIT Madras</h3>
-                        <div class="exp-time">Jun 2022 – May 2023</div>
-                    </div>
-                </div>
-                <div class="exp-bar">
-                    <div class="exp-top">
-                        <h3 class="exp-title">Co-ordinator, Saarang Publicity and Hospitality, IIT Madras</h3>
-                        <div class="exp-time">Jun 2022 – May 2023</div>
-                    </div>
-                </div>
-                <div class="exp-bar">
-                    <div class="exp-top">
-                        <h3 class="exp-title">Co-ordinator, Media Club, IIT Madras</h3>
-                        <div class="exp-time">Dec 2021 – May 2022</div>
-                    </div>
-                </div>
-                <div class="exp-bar">
-                    <div class="exp-top">
-                        <h3 class="exp-title">Mentor, Saathi Mentorship Cell, IIT Madras</h3>
-                        <div class="exp-time">Dec 2021 – May 2022</div>
-                    </div>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-title">Strategist, Saarang Nova, IIT Madras</div>
+                    <div class="exp-time">Jun 2022 – May 2023</div>
                 </div>
             </div>
-        </div>
+             <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-title">Co-ordinator, Saarang Publicity and Hospitality, IIT Madras</div>
+                    <div class="exp-time">Jun 2022 – May 2023</div>
+                </div>
+            </div>
+            </div>
     </main>
-    <footer>© <span id="year"></span> Dhamotharan D</footer>
-    <script src="main.js"></script>
+    
+    <footer>
+        <div class="container">
+            © <span id="year"></span> Dhamotharan D
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelectorAll('[data-exp-card]').forEach(card => {
+            card.querySelector('.exp-header-toggle').addEventListener('click', () => {
+                card.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
