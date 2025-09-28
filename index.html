@@ -50,9 +50,9 @@
         }
 
         .avatar {
-            width: 144px;
-            height: 144px;
-            margin: 0 auto 10px;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 12px;
             border-radius: 50%;
             border: 5px solid #fff;
             box-shadow: var(--shadow);
@@ -73,19 +73,22 @@
         .title-wrap h1 {
             margin: 0;
             font-weight: 700;
-            font-size: 34px;
+            font-size: 36px;
             letter-spacing: -.02em
         }
 
         .subtitle {
-            margin-top: 4px;
-            font-size: 14.5px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, .14), 0 4px 5px rgba(0, 0, 0, .12), 0 1px 10px rgba(0, 0, 0, .2)
+            margin-top: 6px;
+            font-size: 15px;
+            line-height: 1.5;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, .14),
+                0 4px 5px rgba(0, 0, 0, .12),
+                0 1px 10px rgba(0, 0, 0, .2)
         }
 
         .social {
             list-style: none;
-            margin: 12px 0 0;
+            margin: 14px 0 0;
             padding: 0;
             display: flex;
             justify-content: center;
@@ -104,8 +107,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             background: #fff;
             color: #000;
@@ -193,8 +196,8 @@
             }
 
             .avatar {
-                width: 132px;
-                height: 132px
+                width: 150px;
+                height: 150px
             }
 
             .nav {
@@ -202,11 +205,16 @@
             }
 
             .nav a {
-                font-size: 16px
+                font-size: 15px
             }
 
             .social {
                 gap: 8px
+            }
+
+            .social a {
+                width: 34px;
+                height: 34px;
             }
         }
     </style>
@@ -218,7 +226,10 @@
             <div class="avatar"><img src="assets/dp.jpeg" alt="Portrait of Dhamotharan D"></div>
             <div class="title-wrap">
                 <h1><a href="index.html" style="color:#fff;text-decoration:none">Dhamotharan D</a></h1>
-                <div class="subtitle">B. Tech in Metallurgical and Materials Engineering & M. Tech in Advanced Materials and Nanotechnology, IIT Madras</div>
+                <div class="subtitle">
+                    B. Tech in Metallurgical and Materials Engineering <br>
+                    Integrated M. Tech in Advanced Materials and Nanotechnology, IIT Madras
+                </div>
                 <ul class="social">
                     <li><a aria-label="Google Scholar" href="#" target="_blank" rel="noopener"><img src="assets/google_scholar.png" alt="Google Scholar"></a></li>
                     <li><a aria-label="ORCID" href="#" target="_blank" rel="noopener"><img src="assets/orcid.png" alt="ORCID"></a></li>
@@ -234,7 +245,7 @@
                 <a href="publications.html">Publications</a>
                 <a href="cv.html">CV</a>
                 <a href="projects.html">Projects</a>
-		<a href="achievements.html">Achievements</a>
+		        <a href="achievements.html">Achievements</a>
                 <a href="experience.html">Experiences</a>
             </nav>
         </div>
