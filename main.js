@@ -28,6 +28,9 @@
       // Find the primary clickable area, if it exists
       var toggle = bar.querySelector('.exp-bar-toggle') || bar;
 
+      // Make it keyboard-focusable
+      bar.setAttribute('tabindex', '0');
+
       // Toggle open/closed on click
       toggle.addEventListener('click', function (e) {
         if (e.target && e.target.closest('a')) return; // don't toggle when a link is clicked
