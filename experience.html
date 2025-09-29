@@ -20,7 +20,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--text-primary); background-color: #fff; font-size: 15px; line-height: 1.6; font-weight: 300; }
         .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-        .header { position: relative; color: #fff; padding-top: 60px; padding-bottom: 60px; text-align: center; background-image: url('docs/background.jpg'); background-size: cover; background-position: center; }
+        .header { position: relative; color: #fff; padding-top: 60px; padding-bottom: 60px; text-align: center; background-image: url('docs/background.png'); background-size: cover; background-position: center; }
         .header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 1; }
         .header-inner { position: relative; z-index: 2; }
         .avatar { width: 160px; height: 160px; margin: 0 auto 16px; border-radius: 50%; border: 4px solid rgba(255, 255, 255, 0.9); box-shadow: var(--shadow-md); overflow: hidden; }
@@ -41,17 +41,17 @@
         .page-title { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
         .lead { font-size: 18px; color: var(--text-secondary); margin-bottom: 40px; font-weight: 300; }
         .section-title { font-size: 24px; font-weight: 700; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
-        .exp-card { background-color: #fff; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; transition: box-shadow 0.2s ease; }
+        .exp-card { background-color: #fff; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; transition: box-shadow 0.2s ease; overflow: hidden; }
         .exp-card:hover { box-shadow: var(--shadow-md); }
-        .exp-header { padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .exp-header { padding: 20px; }
         .exp-header-toggle { cursor: pointer; }
+        .exp-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
         .exp-title { font-size: 18px; font-weight: 700; color: var(--text-primary); }
-        .exp-time { font-size: 14px; color: var(--text-secondary); font-weight: 400; white-space: nowrap; }
-        .exp-summary { padding: 0 20px 16px 20px; font-size: 15px; color: var(--text-secondary); }
-        .exp-details { display: none; padding: 16px 20px; border-top: 1px dashed var(--border); }
-        .exp-details ul { list-style-position: inside; padding-left: 0; }
-        .exp-details li { margin-bottom: 8px; }
-        .chevron { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--text-secondary); transition: transform .2s ease; margin-left: 12px; }
+        .exp-time { font-size: 14px; color: var(--text-secondary); font-weight: 400; white-space: nowrap; flex-shrink: 0; }
+        .exp-summary { font-size: 15px; color: var(--text-secondary); margin-top: 8px; }
+        .exp-details { display: none; padding: 20px; border-top: 1px dashed var(--border); background-color: var(--background-light); }
+        .exp-details ul { padding-left: 20px; color: #343a40; }
+        .chevron { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--text-secondary); transition: transform .2s ease; margin-left: 12px; display: inline-block; }
         .exp-card.open .chevron { transform: rotate(180deg); }
         .exp-card.open .exp-details { display: block; }
         footer { padding: 24px 0; border-top: 1px solid var(--border); text-align: center; color: #6c757d; }
@@ -60,7 +60,7 @@
 <body>
     <header class="header">
         <div class="header-inner">
-             <div class="avatar"><img src="assets/portrait.png" alt="Portrait of Dhamotharan D"></div>
+             <div class="avatar"><img src="assets/portraits.png" alt="Portrait of Dhamotharan D"></div>
             <div class="title-wrap">
                 <h1><a href="index.html">Dhamotharan D</a></h1>
                 <div class="subtitle">Materials Science & Nanotechnology Researcher</div>
@@ -90,13 +90,31 @@
             <p class="lead">My professional and leadership experiences.</p>
 
             <h2 class="section-title">Professional Experience</h2>
+            
             <div class="exp-card" data-exp-card>
                 <div class="exp-header exp-header-toggle">
-                    <div>
-                        <div class="exp-title">R&D Intern — The Titan Company Jewellery Division</div>
-                        <p class="exp-summary">Contributed to developing a cost-efficient manufacturing route for gold bangles.</p>
+                    <div class="exp-top">
+                        <h3 class="exp-title">Deep Tech Investment Strategy Intern — TVS Capital Funds</h3>
+                        <div class="exp-time">May 2023 – Jul 2023 <span class="chevron"></span></div>
                     </div>
-                    <div class="exp-time">May 2022 – Jul 2022 <span class="chevron"></span></div>
+                    <p class="exp-summary">Developed a strategic framework for identifying and evaluating investment opportunities in the deep tech sector.</p>
+                </div>
+                <div class="exp-details">
+                    <ul>
+                        <li>Developed a comprehensive protocol for categorizing deep tech startups to streamline the evaluation process.</li>
+                        <li>Analyzed the investment landscape to identify and pipeline promising Series B and C stage companies for potential investment.</li>
+                        <li>Contributed to building the firm's strategic sector thesis for investments in deep technology.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-card" data-exp-card>
+                <div class="exp-header exp-header-toggle">
+                    <div class="exp-top">
+                        <h3 class="exp-title">R&D Intern — The Titan Company Jewellery Division</h3>
+                        <div class="exp-time">May 2022 – Jul 2022 <span class="chevron"></span></div>
+                    </div>
+                    <p class="exp-summary">Contributed to developing a cost-efficient manufacturing route for gold bangles.</p>
                 </div>
                 <div class="exp-details">
                     <ul>
@@ -109,23 +127,42 @@
             <h2 class="section-title">Positions of Responsibility</h2>
             <div class="exp-card">
                 <div class="exp-header">
-                    <div class="exp-title">Strategist, Saarang Nova, IIT Madras</div>
-                    <div class="exp-time">Jun 2022 – May 2023</div>
+                    <div class="exp-top">
+                        <h3 class="exp-title">Strategist, Saarang Nova, IIT Madras</h3>
+                        <div class="exp-time">Jun 2022 – May 2023</div>
+                    </div>
                 </div>
             </div>
              <div class="exp-card">
                 <div class="exp-header">
-                    <div class="exp-title">Co-ordinator, Saarang Publicity and Hospitality, IIT Madras</div>
-                    <div class="exp-time">Jun 2022 – May 2023</div>
+                    <div class="exp-top">
+                        <h3 class="exp-title">Co-ordinator, Saarang Publicity and Hospitality, IIT Madras</h3>
+                        <div class="exp-time">Jun 2022 – May 2023</div>
+                    </div>
                 </div>
             </div>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-top">
+                        <h3 class="exp-title">Co-ordinator, Media Club, IIT Madras</h3>
+                        <div class="exp-time">Dec 2021 – May 2022</div>
+                    </div>
+                </div>
             </div>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-top">
+                        <h3 class="exp-title">Mentor, Saathi Mentorship Cell, IIT Madras</h3>
+                        <div class="exp-time">Dec 2021 – May 2022</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
     
     <footer>
-        <div class="container">
-            © <span id="year"></span> Dhamotharan D
-        </div>
+        <div class="container">© <span id="year"></span> Dhamotharan D</div>
     </footer>
     
     <script>
